@@ -49,7 +49,8 @@ final class RockPaperScissors {
         String output = "";
 
         // Computer chooses rock, paper, or scissors
-        final String[] computerOptions = {rockString, paperString, scissorsString};
+        final String[] computerOptions =
+            {rockString, paperString, scissorsString};
         final Random random = new Random();
         final String computerChoice =
             computerOptions[random.nextInt(randnumberMax)];
