@@ -47,7 +47,8 @@ final class RockPaperScissors {
         // Computer chooses rock, paper, or scissors
         String[] computerOptions = {rockString, paperString, scissorsString};
         final Random random = new Random();
-        final String computerChoice = computerOptions[random.nextInt(randnumberMax)];
+        final String computerChoice =
+            computerOptions[random.nextInt(randnumberMax)];
 
         // Process
         System.out.println("You choose: " + userInputString);
@@ -57,21 +58,21 @@ final class RockPaperScissors {
         } else {
             switch (computerChoice) {
                 case rockString:
-                    if (userInputString == scissorsString) {
+                    if (userInputString.equals(scissorsString)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
                 case paperString:
-                    if (userInputString == rockString) {
+                    if (userInputString.equals(rockString)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
                 case scissorsString:
-                    if (userInputString == paperString) {
+                    if (userInputString.equals(paperString)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
@@ -82,22 +83,26 @@ final class RockPaperScissors {
         return output;
     }
 
-
     /**
     * The starting main() function.
     *
     * @param args No args will be used
     */
     public static void main(String[] args) {
+        // variables
+        final String rockString = "rock";
+        final String paperString = "paper";
+        final String scissorsString = "scissors";
+
         // Input
         final Scanner scanner = new Scanner(System.in);
         System.out.print("rock, paper, or scissors? (lowercase): ");
         final String userInputString = scanner.nextLine().trim();
 
         // Error check
-        if (userInputString == "rock"
-            || userInputString == "paper"
-            || userInputString == "scissors") {
+        if (userInputString.equals(rockString)
+            || userInputString.equals(paperString)
+            || userInputString.equals(scissorsString)) {
             final String output = rockPaperScissor(userInputString);
             System.out.println(output);
         } else {
