@@ -62,21 +62,21 @@ final class RockPaperScissors {
             output = tiedOutcome;
         } else {
             switch (computerChoice) {
-                case String(rockString):
+                case rockString:
                     if (userInputString.equals(scissorsString)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
-                case String(paperString):
+                case paperString:
                     if (userInputString.equals(rockString)) {
                         output = lostOutcome;
                     } else {
                         output = winOutcome;
                     }
                     break;
-                case String(scissorsString):
+                case scissorsString:
                     if (userInputString.equals(paperString)) {
                         output = lostOutcome;
                     } else {
