@@ -33,19 +33,19 @@ final class RockPaperScissors {
     * @param userInputString  The user's input.
     * @return The outcome of the game.
     */
-    public static String rockPaperScissor(String userInputString) {
+    public static String rockPaperScissor(
+        String userInputString, String rockString, 
+        String paperString, String scissorsString) {
+
         // variables
         final String winOutcome = "You won!";
         final String lostOutcome = "You lost...";
         final String tiedOutcome = "You tied.";
-        final String rockString = "rock";
-        final String paperString = "paper";
-        final String scissorsString = "scissors";
         final int randnumberMax = 3;
         String output = "";
 
         // Computer chooses rock, paper, or scissors
-        String[] computerOptions = {rockString, paperString, scissorsString};
+        final String[] computerOptions = {rockString, paperString, scissorsString};
         final Random random = new Random();
         final String computerChoice =
             computerOptions[random.nextInt(randnumberMax)];
@@ -78,6 +78,8 @@ final class RockPaperScissors {
                         output = winOutcome;
                     }
                     break;
+                default:
+                    break;
             }
         }
         return output;
@@ -103,7 +105,8 @@ final class RockPaperScissors {
         if (userInputString.equals(rockString)
             || userInputString.equals(paperString)
             || userInputString.equals(scissorsString)) {
-            final String output = rockPaperScissor(userInputString);
+            final String output = rockPaperScissor(
+                userInputString, rockString, paperString, scissorsString);
             System.out.println(output);
         } else {
             System.out.println("Invalid input.");
