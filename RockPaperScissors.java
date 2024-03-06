@@ -37,11 +37,12 @@ final class RockPaperScissors {
     *
     * @return The outcome of the game.
     */
-    public static String rockPaperScissor(
-        String userInputString, String rockString,
-        String paperString, String scissorsString) {
+    public static String rockPaperScissor(String userInputString) {
 
         // variables
+        final String rockString = "rock";
+        final String paperString = "paper";
+        final String scissorsString = "scissors";
         final String winOutcome = "You won!";
         final String lostOutcome = "You lost...";
         final String tiedOutcome = "You tied.";
@@ -110,8 +111,7 @@ final class RockPaperScissors {
         if (userInputString.equals(rockString)
             || userInputString.equals(paperString)
             || userInputString.equals(scissorsString)) {
-            final String output = rockPaperScissor(
-                userInputString, rockString, paperString, scissorsString);
+            final String output = rockPaperScissor(userInputString);
             System.out.println(output);
         } else {
             System.out.println("Invalid input.");
