@@ -31,10 +31,14 @@ final class RockPaperScissors {
     * This function simulates a game of "rock-paper-scissors".
     *
     * @param userInputString  The user's input.
+    * @param rockString  constant for "rock"
+    * @param paperString  constant for "paper"
+    * @param scissorsString  constant for "scissors"
+    *
     * @return The outcome of the game.
     */
     public static String rockPaperScissor(
-        String userInputString, String rockString, 
+        String userInputString, String rockString,
         String paperString, String scissorsString) {
 
         // variables
