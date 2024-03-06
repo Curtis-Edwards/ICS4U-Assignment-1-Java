@@ -42,9 +42,6 @@ final class RockPaperScissors {
         String paperString, String scissorsString) {
 
         // variables
-        final String rockString = rockString;
-        final String paperString = paperString;
-        final String scissorsString = scissorsString;
         final String winOutcome = "You won!";
         final String lostOutcome = "You lost...";
         final String tiedOutcome = "You tied.";
