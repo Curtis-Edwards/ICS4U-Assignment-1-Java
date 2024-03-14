@@ -38,7 +38,7 @@ final class RockPaperScissors {
     * @return The outcome of the game.
     */
     public static String rockPaperScissor(
-        String userInputString, Int rockString, 
+        String userInputString, Int rockString,
         Int paperString, Int scissorsString
     ) {
 
